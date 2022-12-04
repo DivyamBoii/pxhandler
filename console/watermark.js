@@ -1,0 +1,6 @@
+const colors = require('colors')
+console.log(`╭―――――――――――――――――――――――――――――╮`.rainbow)
+console.log(`│                             │`.rainbow)
+console.log(`│  Command Handler By Palixi  │`.rainbow)
+console.log(`│                             │`.rainbow)
+console.log(`╰―――――――――――――――――――――――――――――╯`.rainbow)

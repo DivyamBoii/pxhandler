@@ -1,0 +1,20 @@
+{
+  "name": "discord-bot-template",
+  "version": "1.0.0",
+  "description": "discordjsv14 bot handler",
+  "main": "./Structures/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "DIVYAM",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "colors": "^1.4.0",
+    "discord.js": "^14.6.0",
+    "glob": "^7.2.0",
+    "mongoose": "^6.7.5",
+    "ms": "^2.1.3"
+  }
+}

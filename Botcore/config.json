@@ -1,0 +1,5 @@
+{
+    "TOKEN": "TOKEN-HERE",
+    "OWNERIDS": ["OWNER-IDS HERE"],
+    "DATABASE": "mongo uri here"
+}
