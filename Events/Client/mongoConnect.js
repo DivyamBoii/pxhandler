@@ -18,7 +18,7 @@ module.exports = {
          * multi guild.
          */
         if (!mongo) return
-        mongoose.connect(mongo, { useNewUrlParser: true, useUnifiedTopology: true
+        mongoose.connect(config.DATABASE || process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true
         }).then(() => { console.log("🔹 Database Connected!".red) }).catch(err => console.log(err))
     }
 }
