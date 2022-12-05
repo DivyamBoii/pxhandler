@@ -30,4 +30,8 @@ Handlers.forEach(handler => {
 })
 
 module.exports = client
-client.login(config.TOKEN)
+client.login(config.TOKEN || process.env.TOKEN)
+    .catch((err) => {
+        console.log("[CRUSH] Error from DiscordAPI :" + err);
+        process.exit();
+})
