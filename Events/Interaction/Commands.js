@@ -1,7 +1,6 @@
 const { Client, CommandInteraction, InteractionType, EmbedBuilder } = require("discord.js")
 const { ApplicationCommand } = InteractionType
 const { Reply, EditReply } = require("../../Systems/Reply")
-const { slash } = require(`../../Systems/onCoolDown`);
 const emoji = require(`../../Botcore/emotes.json`)
 const config = require(`../../Botcore/config.json`)
 const colors = require('colors')
@@ -65,7 +64,7 @@ module.exports = {
 
             // ==============================< Owner Only >============================= \\            
             if (command.DevOnly) {
-              const devs = config.OWNERIDS;
+              const devs = config.OWNERIDS || process.env.OWNERIDS;
               if (!devs.includes(interaction.user.id)) return await interaction.reply({
                 ephemeral: true,
                 embeds: [new EmbedBuilder()
@@ -78,8 +77,8 @@ module.exports = {
 
             // ==============================< Only for offical guilds >============================= \\
             if (command.guildOnly) {
-              const private = config.GuildID_1
-                .concat(config.GuildID_2);
+              const private = config.GuildID_1 || process.env.GuildID_1
+                .concat(config.GuildID_2 || process.env.GuildID_2);
               if (!private.includes(interaction.guild.id)) {
                 return interaction.reply({
                   ephemeral: true,
